@@ -1,45 +1,42 @@
-/* 1) MAX CHAR
 
-Given a string, return the character that is most
-commonly used in the string.
-
---- Examples
-    maxChar("abcccccccd") === "c"
-    maxChar("apple 1231111") === "1"
+/*
+1)
+Create a function to calculate the sum of the two given integers. If the two values are same, then returns triple their sum.
 */
-const maxLetter = (str) => {
-  let max = 0;
-  let maxChar = "";
-  str.split("").forEach((char) => {
-    //loop trough every element
-    if (str.split(char).length > max) {
-      // check if current char is bigger then max (max => 0)
-      max = str.split(char).length;
-      // add the element to max (max => +1)
-      maxChar = char;
-      // maxChar becomes to current char
-    }
-  });
-  return maxChar;
-  // return the maxChar with the highest elements
+
+const calculateAndTriple = function (a, b) {
+  return a === b ? (a + b) * 3 : a + b;
 };
-maxLetter("1223334444");
 
-/* 2) ANAGRAMS
-
-Check to see if two provided strings are anagrams of each other.
-One string is an anagram of another if it uses the same characters
-in the same quantity. Only consider characters, not spaces
-or punctuation.  Consider capital letters to be the same as lower case
-
---- Examples
-  anagrams('rail safety', 'fairy tales') --> True
-  anagrams('RAIL! SAFETY!', 'fairy tales') --> True
-  anagrams('Hi there', 'Bye there') --> False
+console.log(calculateAndTriple(4, 3));
+/*
+2)
+Create a function to check two given numbers and return true if one of the number is 50 or if their sum is 50.
 */
-const isAnagram = (str1, str2) =>
-  str1.split("").sort().join("") === str2.split("").sort().join("");
+const checkIfItsEqual = function () {
+  let firstNumber = 30;
+  let secondNumber = 30;
 
-// split("") = split´s strings between each char ( with an comma)
-// sort() = alphabeticly sorted
-// join("") = put every element in a only string, ( join("+") would put a "+" between every element )
+  if (
+    firstNumber === 50 ||
+    secondNumber === 50 ||
+    firstNumber + secondNumber === 50
+  ) {
+    console.log("true");
+  } else {
+    console.log("false");
+  }
+};
+
+checkIfItsEqual();
+/*
+3)
+Create a function to remove a character at the specified position of a given string and return the new string.
+*/
+
+const removeCharacter = function () {
+  let string = "Strive";
+  string1 = string.slice(0, 3);
+  string1 += string.slice(4, 7);
+  console.log(string1);
+};
