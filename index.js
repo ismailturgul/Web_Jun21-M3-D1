@@ -61,3 +61,19 @@ const largestNumber = function () {
   };
   largestNumber();
   
+/*
+5)
+Create a function to check whether two numbers are in range 40..60 or in the range 70..100 inclusive.
+*/
+
+const checkTheRange = function () {
+  let x = 30;
+  let y = 33;
+
+  if ((x + y >= 40 && x + y <= 60) || (x + y >= 70 && x + y <= 100)) {
+    console.log(`${x + y} = in the range`);
+  } else {
+    console.log(`is not in the range`);
+  }
+};
+checkTheRange();
