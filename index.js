@@ -161,3 +161,32 @@ const longestString = function () {
   };
   
   longestString();
+
+  /*
+12)
+Create a function to find the types of a given angle.
+Types of angles:
+    Acute angle: An angle between 0 and 90 degrees.
+    Right angle: An 90 degree angle.
+    btuse angle: An angle between 90 and 180 degrees.
+    Straight angle: A 180 degree angle.
+*/
+const typesOfAngle = function (angle) {
+    if (angle < 90) {
+      return "Acute angle.";
+    }
+    if (angle === 90) {
+      return "Right angle.";
+    }
+    if (angle < 180) {
+      return "Obtuse angle.";
+    }
+    if (angle === 180) {
+      return "Straight angle.";
+    }
+  };
+  console.log(typesOfAngle(70));
+  console.log(typesOfAngle(90));
+  console.log(typesOfAngle(140));
+  console.log(typesOfAngle(180));
+  
