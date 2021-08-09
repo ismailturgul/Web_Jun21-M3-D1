@@ -1,4 +1,3 @@
-
 /*
 1)
 Create a function to calculate the sum of the two given integers. If the two values are same, then returns triple their sum.
@@ -8,7 +7,7 @@ const calculateAndTriple = function (a, b) {
   return a === b ? (a + b) * 3 : a + b;
 };
 
-console.log(calculateAndTriple(4, 3));
+console.log(calculateAndTriple(3, 3));
 /*
 2)
 Create a function to check two given numbers and return true if one of the number is 50 or if their sum is 50.
@@ -37,6 +36,28 @@ Create a function to remove a character at the specified position of a given str
 const removeCharacter = function () {
   let string = "Strive";
   string1 = string.slice(0, 3);
-  string1 += string.slice(4, 7);
+  string1 += string.slice(4, 6);
   console.log(string1);
 };
+removeCharacter();
+
+/*
+4)
+ Create a function to find the largest of three given integers.
+*/
+
+const largestNumber = function () {
+    let a = 3;
+    let b = 2;
+    let c = 1;
+  
+    if (a > b && a > c) {
+      return console.log(`a is the biggest number = ${a}`);
+    } else if (b > a && b > c) {
+      return console.log(`b is the biggest number = ${b}`);
+    } else {
+      console.log(`c is the biggest number = ${c}`);
+    }
+  };
+  largestNumber();
+  
