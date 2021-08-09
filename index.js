@@ -47,20 +47,20 @@ removeCharacter();
 */
 
 const largestNumber = function () {
-    let a = 3;
-    let b = 2;
-    let c = 1;
-  
-    if (a > b && a > c) {
-      return console.log(`a is the biggest number = ${a}`);
-    } else if (b > a && b > c) {
-      return console.log(`b is the biggest number = ${b}`);
-    } else {
-      console.log(`c is the biggest number = ${c}`);
-    }
-  };
-  largestNumber();
-  
+  let a = 3;
+  let b = 2;
+  let c = 1;
+
+  if (a > b && a > c) {
+    return console.log(`a is the biggest number = ${a}`);
+  } else if (b > a && b > c) {
+    return console.log(`b is the biggest number = ${b}`);
+  } else {
+    console.log(`c is the biggest number = ${c}`);
+  }
+};
+largestNumber();
+
 /*
 5)
 Create a function to check whether two numbers are in range 40..60 or in the range 70..100 inclusive.
@@ -88,16 +88,26 @@ Create a function to create a new string of specified copies (positive number) o
 Create a function to display the city name if the string begins with "Los" or "New" otherwise return blank.
 */
 const displayCityNames = function () {
-    let citys = ["New York", "Guadalajara", "Omotepe", "Los Angelos"];
-  
-    for (let i = 0; i < citys.length; i++) {
-      currentCity = citys[i];
-      if (
-        currentCity.slice(0, 3) === "New" ||
-        currentCity.slice(0, 3) === "Los"
-      ) {
-        console.log(currentCity);
-      }
+  let citys = ["New York", "Guadalajara", "Omotepe", "Los Angelos"];
+
+  for (let i = 0; i < citys.length; i++) {
+    currentCity = citys[i];
+    if (
+      currentCity.slice(0, 3) === "New" ||
+      currentCity.slice(0, 3) === "Los"
+    ) {
+      console.log(currentCity);
     }
-  };
-  displayCityNames();
+  }
+};
+displayCityNames();
+
+/*
+8)
+Create a function to calculate the sum of three elements of a given array of integers of length 3.
+*/
+const calculateTheSumOfArray = function () {
+  let numbersInArray = [1, 2, 3];
+  console.log(numbersInArray.reduce((a, b) => a + b));
+};
+calculateTheSumOfArray();
