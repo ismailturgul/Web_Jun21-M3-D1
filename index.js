@@ -150,19 +150,19 @@ isNotNumber1or3();
 Create a function to find the longest string from a given array of strings.
 */
 const longestString = function () {
-    let findLongestString = ["hi", "how", "you´re", "doing"];
-    let longestString = "0";
-    for (let i = 0; i < findLongestString.length; i++) {
-      currentString = findLongestString[i];
-      if (currentString.length > longestString.length)
-        longestString = currentString;
-    }
-    console.log(longestString + " - is the longest string in the array");
-  };
-  
-  longestString();
+  let findLongestString = ["hi", "how", "you´re", "doing"];
+  let longestString = "0";
+  for (let i = 0; i < findLongestString.length; i++) {
+    currentString = findLongestString[i];
+    if (currentString.length > longestString.length)
+      longestString = currentString;
+  }
+  console.log(longestString + " - is the longest string in the array");
+};
 
-  /*
+longestString();
+
+/*
 12)
 Create a function to find the types of a given angle.
 Types of angles:
@@ -172,21 +172,100 @@ Types of angles:
     Straight angle: A 180 degree angle.
 */
 const typesOfAngle = function (angle) {
-    if (angle < 90) {
-      return "Acute angle.";
+  if (angle < 90) {
+    return "Acute angle.";
+  }
+  if (angle === 90) {
+    return "Right angle.";
+  }
+  if (angle < 180) {
+    return "Obtuse angle.";
+  }
+  if (angle === 180) {
+    return "Straight angle.";
+  }
+};
+console.log(typesOfAngle(70));
+console.log(typesOfAngle(90));
+console.log(typesOfAngle(140));
+console.log(typesOfAngle(180));
+
+/*
+13)
+Create a function to find the index of the greatest element of a given array of integers
+*/
+function greatestElement() {
+  let differentNumbers = [1, 50, 3, 40, 5, 60, 7, 8, 9];
+  let greatestNumber = differentNumbers[0];
+  let indexOfNumber = 0;
+
+  for (let i = 0; i < differentNumbers.length; i++) {
+    let currentNumber = differentNumbers[i];
+    if (greatestNumber < currentNumber) {
+      greatestNumber = currentNumber;
+      indexOfNumber = i;
     }
-    if (angle === 90) {
-      return "Right angle.";
+  }
+  console.log(indexOfNumber + " is the index of the highest element");
+}
+greatestElement();
+
+/*
+14)
+Create a function to get the largest even number from an array of integers.
+
+*/
+function largestEvenNumber() {
+  let arrayOfNumbers = [2, 4, 5, 6, 8, 10, 1];
+  let evenNumbers = [];
+  let largestEvennumber = 0;
+  for (let i = 0; i < arrayOfNumbers.length; i++) {
+    if (arrayOfNumbers[i] % 2 === 0) {
+      evenNumbers.push(arrayOfNumbers[i]);
+      for (let j = 0; j < evenNumbers.length; j++) {
+        if (evenNumbers[j] > largestEvennumber) {
+          largestEvennumber = evenNumbers[j];
+        }
+      }
     }
-    if (angle < 180) {
-      return "Obtuse angle.";
-    }
-    if (angle === 180) {
-      return "Straight angle.";
-    }
-  };
-  console.log(typesOfAngle(70));
-  console.log(typesOfAngle(90));
-  console.log(typesOfAngle(140));
-  console.log(typesOfAngle(180));
+  }
+  console.log(evenNumbers + "the list with the even numbers");
+  console.log(largestEvennumber + "this is the largest number in the array");
+}
+largestEvenNumber();
+/*
+ 16) Create a function to check from two given integers, whether one is positive and another one is negative.
+  */
+function checkPositiveNegativeNumbers(number1, number2) {
+  if (number1 >= 0) {
+    console.log("the number is positive");
+  } else {
+    console.log("the number is negative");
+  }
+  if (number2 >= 0) {
+    console.log("the number is positive");
+  } else {
+    console.log("the number is negative");
+  }
+}
+
+checkPositiveNegativeNumbers(1, -2);
+
+/* 17
+Create a function to create new string with first 3 characters are in lower case and the others in upper case. If the string length is less than 3 convert all the characters in upper case. 
+*/
+function lowerUpperCase() {
+    let wordToConvert = "Helloo";
   
+    if (wordToConvert.length < 3) {
+      lettersLessThen3 = wordToConvert.slice(0, 3);
+      return console.log(lettersLessThen3.toUpperCase());
+    } else {
+      firstPartOfTheWord = wordToConvert.slice(0, 3);
+      secondPartOfTheWord = wordToConvert.slice(3, 7);
+      return console.log(
+        firstPartOfTheWord.toLowerCase() + secondPartOfTheWord.toUpperCase()
+      );
+    }
+  }
+  lowerUpperCase();
